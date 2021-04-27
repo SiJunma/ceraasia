@@ -769,21 +769,36 @@ footer {
         }
     }
 
-    .product__main-img {
+    .product__main-slider {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
         img {
             object-fit: contain;
             width: 100%;
             height: 100%;
         }
+    }
+
+    .product__main-img {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slick-track,
+    .slick-slide,
+    .slick-list {
+        height: 100%;
+    }
+
+    .slick-slide:focus {
+        outline: none;
     }
 
     .product__main-navigation {
@@ -812,6 +827,10 @@ footer {
             object-fit: contain;
             width: 100%;
             height: 100%;
+        }
+
+        &.slick-current {
+            border: 2px solid $other2;
         }
     }
 
