@@ -268,22 +268,22 @@
         margin-right: auto; }
 
   .articles .articles__wrapper {
-    grid-template-columns: repeat(6, 0.5fr);
+    grid-template-columns: repeat(5, 0.5fr);
     grid-template-rows: repeat(3, 240px);
     gap: 10px;
-    grid-template-areas: "box1 box1 box1 box1 box2 box2" "box3 box3 box6 box6 box6 box6" "box4 box4 box4 box5 box5 box5"; }
+    grid-template-areas: "box1 box1 box1 box2 box2" "box3 box3 box4 box4 box4" "box5 box5 box5 box6 box6"; }
   .articles .articles__item-content .articles__item-title {
     font-size: 17px; }
   .articles .articles__item p {
     display: none; }
-  .articles .articles__item.articles__item_big .articles__item-content {
+  .articles .articles__item:nth-child(1) .articles__item-content, .articles .articles__item:nth-child(6) .articles__item-content {
     padding: 12px 15px 12px 15px;
     border-radius: 20px; }
-  .articles .articles__item.articles__item_small .articles__item-title {
+  .articles .articles__item:nth-child(2) .articles__item-title, .articles .articles__item:nth-child(3) .articles__item-title, .articles .articles__item:nth-child(4) .articles__item-title, .articles .articles__item:nth-child(5) .articles__item-title, .articles .articles__item:nth-child(7) .articles__item-title, .articles .articles__item:nth-child(8) .articles__item-title, .articles .articles__item:nth-child(9) .articles__item-title, .articles .articles__item:nth-child(10) .articles__item-title, .articles .articles__item:nth-child(11) .articles__item-title, .articles .articles__item:nth-child(12) .articles__item-title {
     font-size: 14px; }
-  .articles .articles__item.articles__item_small .articles__item-content {
+  .articles .articles__item:nth-child(2) .articles__item-content, .articles .articles__item:nth-child(3) .articles__item-content, .articles .articles__item:nth-child(4) .articles__item-content, .articles .articles__item:nth-child(5) .articles__item-content, .articles .articles__item:nth-child(7) .articles__item-content, .articles .articles__item:nth-child(8) .articles__item-content, .articles .articles__item:nth-child(9) .articles__item-content, .articles .articles__item:nth-child(10) .articles__item-content, .articles .articles__item:nth-child(11) .articles__item-content, .articles .articles__item:nth-child(12) .articles__item-content {
     padding: 10px; }
-  .articles .box7, .articles .box8, .articles .box9, .articles .box10, .articles .box11, .articles .box12 {
+  .articles .articles__item:nth-child(7), .articles .articles__item:nth-child(8), .articles .articles__item:nth-child(9), .articles .articles__item:nth-child(10), .articles .articles__item:nth-child(11), .articles .articles__item:nth-child(12) {
     display: none; }
 
   .blog-filter .blog-filter__list {
@@ -454,15 +454,15 @@
     gap: 0; }
   .articles .articles__item:not(:last-child) {
     margin-bottom: 15px; }
-  .articles .articles__item.articles__item_big {
+  .articles .articles__item:nth-child(1), .articles .articles__item:nth-child(6) {
     border-radius: 20px;
     width: 100%;
-    height: 278px; }
-  .articles .articles__item.articles__item_small {
+    height: 360px; }
+  .articles .articles__item:nth-child(2), .articles .articles__item:nth-child(3), .articles .articles__item:nth-child(4), .articles .articles__item:nth-child(5), .articles .articles__item:nth-child(7), .articles .articles__item:nth-child(8), .articles .articles__item:nth-child(9), .articles .articles__item:nth-child(10), .articles .articles__item:nth-child(11), .articles .articles__item:nth-child(12) {
     border-radius: 20px;
     width: 100%;
-    height: 234px; }
-  .articles .articles__item.box5 {
+    height: 360px; }
+  .articles .articles__item:nth-child(6) {
     display: none; }
 
   .blog-filter {
@@ -573,7 +573,12 @@
     margin-top: 42%; }
     .header-learn .offer p {
       font-size: 16px;
-      max-width: 435px; } }
+      max-width: 435px; }
+
+  .articles .articles__item:nth-child(1), .articles .articles__item:nth-child(6) {
+    height: 250px; }
+  .articles .articles__item:nth-child(2), .articles .articles__item:nth-child(3), .articles .articles__item:nth-child(4), .articles .articles__item:nth-child(5), .articles .articles__item:nth-child(7), .articles .articles__item:nth-child(8), .articles .articles__item:nth-child(9), .articles .articles__item:nth-child(10), .articles .articles__item:nth-child(11), .articles .articles__item:nth-child(12) {
+    height: 250px; } }
 @media screen and (max-width: 426px) {
   .product .product__slider .product__main-thumbnail {
     width: 40px;

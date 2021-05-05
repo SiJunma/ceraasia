@@ -335,13 +335,13 @@
 
     .articles {
         .articles__wrapper {
-            grid-template-columns: repeat(6, 0.5fr);
+            grid-template-columns: repeat(5, 0.5fr);
             grid-template-rows: repeat(3, 240px);
             gap: 10px;
             grid-template-areas:
-            "box1 box1 box1 box1 box2 box2"
-            "box3 box3 box6 box6 box6 box6"
-            "box4 box4 box4 box5 box5 box5";
+            "box1 box1 box1 box2 box2"
+            "box3 box3 box4 box4 box4"
+            "box5 box5 box5 box6 box6";
         }
 
         .articles__item-content .articles__item-title {
@@ -354,14 +354,24 @@
                 display: none;
             }
 
-            &.articles__item_big {
+            &:nth-child(1),
+            &:nth-child(6) {
                 .articles__item-content {
                     padding: 12px 15px 12px 15px;
                     border-radius: 20px;
                 }
             }
 
-            &.articles__item_small {
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(7),
+            &:nth-child(8),
+            &:nth-child(9),
+            &:nth-child(10),
+            &:nth-child(11),
+            &:nth-child(12) {
                 .articles__item-title {
                     font-size: 14px;
                 }
@@ -370,10 +380,15 @@
                     padding: 10px;
                 }
             }
-        }
 
-        .box7, .box8, .box9, .box10, .box11, .box12 {
-            display: none;
+            &:nth-child(7),
+            &:nth-child(8),
+            &:nth-child(9),
+            &:nth-child(10),
+            &:nth-child(11),
+            &:nth-child(12) {
+                display: none;
+            }
         }
 
     }
@@ -615,19 +630,29 @@
                 margin-bottom: 15px;
             }
             
-            &.articles__item_big {
+            &:nth-child(1),
+            &:nth-child(6) {
                 border-radius: 20px;
                 width: 100%;
-                height: 278px;
+                height: 360px;
             }
 
-            &.articles__item_small {
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(7),
+            &:nth-child(8),
+            &:nth-child(9),
+            &:nth-child(10),
+            &:nth-child(11),
+            &:nth-child(12) {
                 border-radius: 20px;
                 width: 100%;
-                height: 234px;
+                height: 360px;
             }
 
-            &.box5 {
+            &:nth-child(6) {
                 display: none;
             }
         }
@@ -817,6 +842,31 @@
 
         padding-top: 0;
         margin-top: 42%;
+    }
+
+    
+    .articles {
+
+        .articles__item {
+            
+            &:nth-child(1),
+            &:nth-child(6) {
+                height: 250px;
+            }
+
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(7),
+            &:nth-child(8),
+            &:nth-child(9),
+            &:nth-child(10),
+            &:nth-child(11),
+            &:nth-child(12) {
+                height: 250px;
+            }
+        }
     }
 }
 
